@@ -175,3 +175,42 @@ nav .effect .circle::before{
     background-color: rgb(246, 246, 246);
     border-radius: 10%;
 }
+
+/* loading */
+
+.loader {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    transition: opacity 0s, visibility 0.75s;
+}
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 5px solid rgba(128, 128, 128, 0.18);
+    border-top-color: black;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from{
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
