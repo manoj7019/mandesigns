@@ -23,3 +23,11 @@ window.addEventListener('load', ()=> {
         document.body.removeChild('loader');
     })
 })
+
+// Page Load
+window.addEventListener('pageshow', (event) => {
+    // Check if the event is triggered by page restore from the cache
+    if (event.persisted) {
+      window.location.reload(); // Reload the page
+    }
+});
