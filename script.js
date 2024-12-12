@@ -11,3 +11,15 @@ items.forEach(item => {
 
 let itemActive = nav.querySelector('a.active');
 if(itemActive) nav.style.setProperty('--position-x-active', itemActive.offsetLeft + 'px');
+
+// Loader
+
+window.addEventListener('load', ()=> {
+    const loader = document.querySelector('.loader');
+
+    loader.classList.add('loader-hidden');
+
+    loader.addEventListener('transitionend', ()=> {
+        document.body.removeChild('loader');
+    })
+})
