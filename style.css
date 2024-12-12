@@ -218,3 +218,17 @@ nav .effect .circle::before{
         transform: rotate(1turn);
     }
 }
+
+/* Social Icon */
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 35px;
+    height: auto;
+}
